@@ -17,14 +17,14 @@ project_path = Path(os.path.dirname(os.path.abspath(__file__)))
 assets_blueprint = Blueprint(
     "assets_blueprint",
     __name__,
-    static_folder="vite/dist/static",
+    static_folder="frontend/dist/static",
     static_url_path="/static",
 )
 
 # Load manifest file in the production environment.
 manifest = {}
 if is_production:
-    manifest_path = project_path / "vite/dist/.vite/manifest.json"
+    manifest_path = project_path / "frontend/dist/.vite/manifest.json"
     try:
         with open(manifest_path, "r") as content:
             manifest = json.load(content)
