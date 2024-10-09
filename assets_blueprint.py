@@ -54,4 +54,3 @@ def add_context():
         "asset_css": prod_css_asset,
         "is_production": is_production,
     }
-
