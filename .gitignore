@@ -1,3 +1,5 @@
 # Add these anywhere inside .gitingore
 __pycache__
 .venv
+/venv/
+.env
