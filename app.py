@@ -4,9 +4,13 @@ import json
 import logging, logging.handlers
 from flask import Flask, render_template
 from assets_blueprint import assets_blueprint
+from dotenv import load_dotenv
 
-ROOT_DIR = "/www/flask-vuejs"
-LOG_DIR = "/www/flask-vuejs"
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_DIR = ROOT_DIR
+
+dotenv_path = ROOT_DIR + '.env'
+load_dotenv(dotenv_path)
 
 os.chdir(ROOT_DIR)
 sys.path.append(ROOT_DIR)

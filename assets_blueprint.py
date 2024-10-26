@@ -9,8 +9,7 @@ FLASK_DEBUG = os.getenv("FLASK_DEBUG", "0")
 VITE_ORIGIN = os.getenv("VITE_ORIGIN", "http://localhost:5173")
 
 # Set application constants.
-is_gunicorn = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
-is_production = FLASK_DEBUG != "1" or is_gunicorn
+is_production = FLASK_DEBUG != "1"
 project_path = Path(os.path.dirname(os.path.abspath(__file__)))
 
 # Create assets blueprint that stores all Vite-related functionality.
